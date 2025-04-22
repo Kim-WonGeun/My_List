@@ -23,6 +23,18 @@ public class SecurityConfig {
                 );
 
 
+        httpSecurity
+                .formLogin((auth) -> auth.loginPage("/login")
+                        .loginProcessingUrl("loginProc")
+                        .permitAll()
+                );
+
+
+        httpSecurity
+                .csrf((auth) -> auth.disable()
+                );
+
+
         return httpSecurity.build();
     }
 
