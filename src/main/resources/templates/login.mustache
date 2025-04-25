@@ -2,16 +2,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* 수평 가운데 */
+            align-items: center;     /* 수직 가운데 */
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
-login page
-
 <form action="/loginProc" method="post" name="loginForm">
-    <input id="username" type="text" name="username" placeholder="id"/>
-    <input id="password" type="password" name="password" placeholder="password"/>
-    <input type="submit"value="login"/>
+    <input id="username" type="text" name="username" placeholder="아이디" required/>
+    <input id="password" type="password" name="password" placeholder="비밀번호" required/>
+    <input type="submit" value="로그인"/>
 </form>
 
 </body>
